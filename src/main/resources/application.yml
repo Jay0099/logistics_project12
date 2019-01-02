@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/logisticsproject
+    password: ww
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root

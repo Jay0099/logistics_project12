@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>后台登录-X-admin1.1</title>
+</head>
+<body>
+<!-- 左侧菜单开始 -->
+<div class="left-nav" id="leftHtml" >
+<div id="side-nav">
+    <ul id="nav">
+        <li class="list" current>
+            <a href="index.html">
+                <i class="iconfont">&#xe761;</i>
+                欢迎页面
+                <i class="iconfont nav_right">&#xe697;</i>
+            </a>
+        </li>
+        <li class="list">
+            <a href="javascript:;">
+                <i class="iconfont">&#xe70b;</i>
+                资源管理
+                <i class="iconfont nav_right">&#xe697;</i>
+            </a>
+            <ul class="sub-menu">
+                <li>
+                    <a href="ry_way.html">
+                        <i class="iconfont">&#xe6a7;</i>
+                        线路管理
+                    </a>
+                </li>
+                <li class="list1">
+                    <a href="javascript:;"><!--member-del.html-->
+                        <i class="iconfont nav_left">&#xe6a7;</i>
+                        客户管理
+                    </a>
+                    <ul class="sub-menu1">
+                        <li>
+                            <a href="ry_customer.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                发货人
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ry_ancustomer.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                收货人
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list1">
+                    <a href="javascript:;">
+                        <i class="iconfont nav_left">&#xe6a7;</i>
+                        客户价格体系管理
+                    </a>
+                    <ul class="sub-menu1">
+                        <li>
+                            <a href="ry_cust_price.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                按目的地接单价
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ry_cust_price.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                散货运输接单价
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ry_cust_price.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                整车运输单程接单价
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list1">
+                    <a href="javascript:;">
+                        <i class="iconfont nav_left">&#xe6a7;</i>
+                        合同供应商管理
+                    </a>
+                    <ul class="sub-menu1">
+                        <li>
+                            <a href="ry_contract_per.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                承运人信息管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ry_contract_per.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                合同供应商价格体系管理
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </li>
+                <li class="list1">
+                    <a href="javascript:;">
+                        <i class="iconfont nav_left">&#xe6a7;</i>
+                        自有车队管理
+                    </a>
+                    <ul class="sub-menu1">
+                        <li>
+                            <a href="ry_contract_per.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                车辆信息管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ry_contract_per.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                车队信息管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ry_contract_per.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                司机信息管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ry_contract_per.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                车辆司机档案管理
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list1">
+                    <a href="javascript:;">
+                        <i class="iconfont nav_left">&#xe6a7;</i>
+                        车辆日常维护
+                    </a>
+                    <ul class="sub-menu1">
+                        <li>
+                            <a href="ry_car_protect.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                车辆审验
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ry_car_protect.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                车辆维修
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="list1">
+                    <a href="ry_user.html">
+                        <i class="iconfont nav_left">&#xe6a7;</i>
+                        系统用户管理
+                    </a>
+                    <ul class="sub-menu1">
+                        <li>
+                            <a href="ry_user.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                用户管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ry_role.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                角色管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ry_pwd.html" style="font-size: 5px;padding-left: 70px">
+                                <i class="iconfont">&#xe6a7;</i>
+                                更改密码
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="list1">
+                    <a href="ry_log.html">
+                        <i class="iconfont nav_left">&#xe6a7;</i>
+                        系统日志
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="list">
+            <a href="javascript:;">
+                <i class="iconfont">&#xe6a3;</i>
+                业务管理
+                <i class="iconfont nav_right">&#xe697;</i>
+            </a>
+            <ul class="sub-menu">
+                <li>
+                    <a href="./category.html">
+                        <i class="iconfont">&#xe6a7;</i>
+                        分类列表
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="list">
+            <a href="javascript:;">
+                <i class="iconfont">&#xe6a3;</i>
+                操作管理
+                <i class="iconfont nav_right">&#xe697;</i>
+            </a>
+            <ul class="sub-menu" style="display:none">
+                <li>
+                    <a href="./banner-list.html">
+                        <i class="iconfont">&#xe6a7;</i>
+                        轮播列表
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="list">
+            <a href="javascript:;">
+                <i class="iconfont">&#xe6a3;</i>
+                出入库管理
+                <i class="iconfont nav_right">&#xe697;</i>
+            </a>
+            <ul class="sub-menu" style="display:none">
+                <li>
+                    <a href="xjy_warehouseManage.html">
+                        <i class="iconfont">&#xe6a7;</i>
+                        入库管理
+                    </a>
+                </li>
+                <li>
+                    <a href="xjy_outOfManage.html">
+                        <i class="iconfont">&#xe6a7;</i>
+                        出库管理
+                    </a>
+                </li>
+                <li>
+                    <a href="xjy_outAndInManage.html">
+                        <i class="iconfont">&#xe6a7;</i>
+                        出入库异常管理
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="list">
+            <a href="javascript:;">
+                <i class="iconfont">&#xe6a3;</i>
+                货物跟踪
+                <i class="iconfont nav_right">&#xe697;</i>
+            </a>
+            <ul class="sub-menu" style="display:none">
+                <li>
+                    <a href="xjy_cargoTrackingEntering.html">
+                        <i class="iconfont">&#xe6a7;</i>
+                        货物跟踪信息录入
+                    </a>
+                </li>
+                <li>
+                    <a href="xjy_cargoTrackingInquire.html">
+                        <i class="iconfont">&#xe6a7;</i>
+                        货物跟踪信息查询
+                    </a>
+                </li>
+                <li>
+                    <a href="xjy_cargoDeliveryInquire.html">
+                        <i class="iconfont">&#xe6a7;</i>
+                        货物送达查询
+                    </a>
+                </li>
+                <li>
+                    <a href="xjy_DeliveryAbnormalInquire.html">
+                        <i class="iconfont">&#xe6a7;</i>
+                        送达异常查询
+                    </a>
+                </li>
+                <li>
+                    <a href="xjy_cargoAgingManage.html">
+                        <i class="iconfont">&#xe6a7;</i>
+                        货物时效管理
+                    </a>
+                </li>
+                <li>
+                    <a href="xjy_outTimeUndeliveredInquire.html">
+                        <i class="iconfont">&#xe6a7;</i>
+                        超期未送达查询
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="list">
+            <a href="javascript:;">
+                <i class="iconfont">&#xe6a3;</i>
+                回单管理
+                <i class="iconfont nav_right">&#xe697;</i>
+            </a>
+            <ul class="sub-menu" style="display:none">
+                <li>
+                    <a href="./banner-list.html">
+                        <i class="iconfont">&#xe6a7;</i>
+                        轮播列表
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+
+
+
+
+        <li class="list">
+            <a href="javascript:;">
+                <i class="iconfont">&#xe6a3;</i>
+                财务管理
+                <i class="iconfont nav_right">&#xe697;</i>
+            </a>
+            <ul class="sub-menu" style="display:none">
+                <li>
+                    <a href="./banner-list.html">
+                        <i class="iconfont">&#xe6a7;</i>
+                        轮播列表
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+
+    </ul>
+</div>
+</div>
+
+<!-- 左侧菜单结束 -->
+
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <properties resource="mybatis-generator/mybatisGeneratorinit.properties"/>
+
+    <context id="MysqlTables" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+
+        <property name="autoDelimitKeywords" value="true" />
+
+        <property name="javaFileEncoding" value="utf-8" />
+
+        <property name="beginningDelimiter" value="`" />
+        <property name="endingDelimiter" value="`" />
+
+
+        <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"/>
+
+        <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+
+        <commentGenerator >
+            <property name="suppressAllComments" value="false"/>
+            <property name="suppressDate" value="true" />
+        </commentGenerator>
+
+        <jdbcConnection driverClass="${jdbc_driver}" connectionURL="${jdbc_url}" userId="${jdbc_user}" password="${jdbc_password}" />
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- 生成实体类地址 -->
+        <javaModelGenerator targetPackage="cn.log.pojo" targetProject="${project}" >
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!-- 生成mapxml文件 -->
+        <sqlMapGenerator targetPackage="cn.log.mappers" targetProject="${resources}" >
+            <property name="enableSubPackages" value="false" />
+        </sqlMapGenerator>
+        <!-- 生成mapxml -->
+        <javaClientGenerator targetPackage="cn.log.mappers" targetProject="${project}" type="XMLMAPPER" >
+            <property name="enableSubPackages" value="false" />
+        </javaClientGenerator>
+
+        <table schema="Cargodetails" tableName="lg_cargodetails"></table>
+        <table schema="Carrier" tableName="lg_carrier"></table>
+        <table schema="Company" tableName="lg_company"></table>
+        <table schema="Compensationgoodsorder" tableName="lg_compensationgoodsorder"></table>
+        <table schema="Driver" tableName="lg_driver"></table>
+        <table schema="Etrustmentslip" tableName="lg_etrustmentslip"></table>
+        <table schema="Fleet" tableName="Expenditure"></table>
+        <table schema="Freightcharges" tableName="lg_freightcharges"></table>
+        <table schema="Goods" tableName="lg_goods"></table>
+        <table schema="Goodsdamage" tableName="lg_goodsdamage"></table>
+        <table schema="Goodstype" tableName="lg_goodstype"></table>
+        <table schema="Goodstypecharges" tableName="lg_goodstypecharges"></table>
+        <table schema="Income" tableName="lg_income"></table>
+        <table schema="Order" tableName="lg_order"></table>
+        <table schema="Ordergoods" tableName="lg_ordergoods"></table>
+        <table schema="Orderwaybill" tableName="lg_orderwaybill"></table>
+        <table schema="Outbound" tableName="lg_outbound"></table>
+        <table schema="Outboundgoods" tableName="lg_outboundgoods"></table>
+        <table schema="Perms" tableName="lg_perms"></table>
+        <table schema="Receipt" tableName="lg_receipt"></table>
+        <table schema="Receivingparty" tableName="lg_receivingparty"></table>
+        <table schema="Recordgoodscompensation" tableName="lg_recordgoodscompensation"></table>
+        <table schema="Role" tableName="lg_role"></table>
+        <table schema="RolePerm" tableName="lg_role_perm"></table>
+        <table schema="Shipper" tableName="lg_shipper"></table>
+        <table schema="Transferstation" tableName="lg_transferstation"></table>
+        <table schema="User" tableName="lg_user"></table>
+        <table schema="UserRole" tableName="lg_user_role"></table>
+        <table schema="Vehicledriverrecords" tableName="lg_vehicledriverrecords"></table>
+        <table schema="Vehicleinspection" tableName="lg_vehicleinspection"></table>
+        <table schema="Vehicleline" tableName="lg_vehicleline"></table>
+        <table schema="Vehiclelineway" tableName="lg_vehiclelineway"></table>
+        <table schema="Vehiclemaintenance" tableName="lg_vehiclemaintenance"></table>
+        <table schema="Vehicleoperation" tableName="lg_vehicleoperation"></table>
+        <table schema="Warehouse" tableName="lg_warehouse"></table>
+        <table schema="Warehousing" tableName="lg_warehousing"></table>
+        <table schema="Warehousinggoods" tableName="lg_warehousinggoods"></table>
+        <table schema="Waybill" tableName="lg_waybill"></table>
+        <table schema="Waybillgoods" tableName="lg_waybillgoods"></table>
+
+
+
+    </context>
+</generatorConfiguration>
